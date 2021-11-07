@@ -1,0 +1,29 @@
+{
+  "root": "apps/groundwork-client-e2e",
+  "sourceRoot": "apps/groundwork-client-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/groundwork-client-e2e/cypress.json",
+        "devServerTarget": "groundwork-client:serve",
+        "tsConfig": "apps/groundwork-client-e2e/tsconfig.json"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "groundwork-client:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/groundwork-client-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["groundwork-client"]
+}
