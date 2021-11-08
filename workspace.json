@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "groundwork-client": "apps/groundwork-client",
-    "groundwork-client-e2e": "apps/groundwork-client-e2e"
+    "groundwork-client-e2e": "apps/groundwork-client-e2e",
+    "groundwork-components": "libs/groundwork-components",
+    "groundwork-components-e2e": "apps/groundwork-components-e2e"
   }
 }
